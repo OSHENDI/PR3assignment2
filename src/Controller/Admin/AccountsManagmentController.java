@@ -5,22 +5,37 @@
  */
 package Controller.Admin;
 
+import static Controller.Admin.UsersManagmentController.selectedUserToUpdate;
+import static Controller.Admin.UsersManagmentController.updateStage;
+import Model.Accounts;
 import View.ViewManager;
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Yahya
- */
+
 public class AccountsManagmentController implements Initializable {
 
+    
+    public static Accounts selectedUserToUpdate;
+    public static Stage updateStage;
     @FXML
     private Button usersManagmentPageBtn;
     @FXML
@@ -39,13 +54,35 @@ public class AccountsManagmentController implements Initializable {
     private Button searchAccountBtn;
     @FXML
     private TextField accontSearchTF;
+    @FXML
+    private TableColumn<Accounts, Integer> AccIdCol;
+    @FXML
+    private TableColumn<Accounts, Integer> AccNumberCol;
+    @FXML
+    private TableColumn<Accounts, String> UsernameCol;
+    @FXML
+    private TableColumn<Accounts, String> currencyCol;
+    @FXML
+    private TableColumn<Accounts, Double> BalanceCol;
+    @FXML
+    private TableColumn<Accounts, Date> creationDateCol;
+    @FXML
+    private TableView<Accounts> accountsTableView;
+    
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+      AccIdCol.setCellValueFactory(new PropertyValueFactory("id"));
+        AccNumberCol.setCellValueFactory(new PropertyValueFactory("account_number"));
+        UsernameCol.setCellValueFactory(new PropertyValueFactory("username"));
+        currencyCol.setCellValueFactory(new PropertyValueFactory("currency"));
+        BalanceCol.setCellValueFactory(new PropertyValueFactory("balance"));
+        creationDateCol.setCellValueFactory(new PropertyValueFactory("creation_date"));
     }    
 
     @FXML
@@ -66,11 +103,29 @@ public class AccountsManagmentController implements Initializable {
     }
 
     @FXML
-    private void showAllAccounts(ActionEvent event) {
+    private void showAllAccounts(ActionEvent event) throws SQLException, ClassNotFoundException {
+        accountsTableView.getItems().clear();
+        List<Accounts> allAccounts = Accounts.getAllAccounts();
+        ObservableList<Accounts> list = FXCollections.observableArrayList(allAccounts);
+        accountsTableView.setItems(list);
+        
     }
 
     @FXML
-    private void updateSelectedAccount(ActionEvent event) {
+    private void updateSelectedAccount(ActionEvent event) throws IOException {
+//         if (accountsTableView.getSelectionModel().getSelectedItem() != null) {
+//            //store the selected user from the TableView in our global var user selectedUserToUpdate   
+//            selectedUserToUpdate = accountsTableView.getSelectionModel().getSelectedItem();
+//            //load update page fxml
+//            FXMLLoader loaderUpdate = new FXMLLoader(getClass().getResource("/View/AdminFXML/UpdateAccountPage.fxml"));
+//            Parent rootUpdate = loaderUpdate.load();
+//            Scene updateUserScene = new Scene(rootUpdate);
+//            //store loaded fxml in our global stage updateStage and show it
+//            updateStage = new Stage();
+//            updateStage.setScene(updateUserScene);
+//            updateStage.setTitle("Update account " + selectedUserToUpdate.getUsername());
+//            updateStage.show();
+//        }
     }
 
     @FXML

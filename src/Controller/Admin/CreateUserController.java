@@ -93,8 +93,8 @@ public class CreateUserController implements Initializable {
         //after saving should return to the back scene and show an alert
         ViewManager.adminPage.changeSceneToUsersManagment();
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("User inserted");
-        alert.setContentText("User inserted");
+        alert.setTitle("Account inserted");
+        alert.setContentText("Account inserted");
         alert.showAndWait();
     }
 

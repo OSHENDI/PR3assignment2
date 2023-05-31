@@ -5,17 +5,24 @@
  */
 package Model;
 
+import Controller.Admin.PersistenceManager;
 import java.io.Serializable;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.TypedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -38,6 +45,7 @@ public class Accounts implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
@@ -46,7 +54,7 @@ public class Accounts implements Serializable {
     private int userId;
     @Basic(optional = false)
     @Column(name = "account_number")
-    private int accountNumber;
+    private Integer accountNumber;
     @Basic(optional = false)
     @Column(name = "username")
     private String username;
@@ -55,7 +63,7 @@ public class Accounts implements Serializable {
     private String currency;
     @Basic(optional = false)
     @Column(name = "balance")
-    private double balance;
+    private Double balance;
     @Column(name = "creation_date")
     @Temporal(TemporalType.DATE)
     private Date creationDate;
@@ -65,6 +73,14 @@ public class Accounts implements Serializable {
 
     public Accounts(Integer id) {
         this.id = id;
+    }
+     public static List<Accounts> getAllAccounts() throws SQLException, ClassNotFoundException{
+          EntityManager entityManager = PersistenceManager.getInstance().getEntityManager();
+        TypedQuery<Accounts> query = entityManager.createNamedQuery("Users.findAll", Accounts.class);
+        List<Accounts> usersList = query.getResultList();
+        entityManager.close();
+        return usersList;
+        
     }
 
     public Accounts(Integer id, int userId, int accountNumber, String username, String currency, double balance) {

@@ -21,7 +21,7 @@
                   <Glow level="0.33" />
                </effect>
             </Label>
-            <Button fx:id="usersManagmentPageBtn" alignment="BASELINE_LEFT" layoutY="186.0" mnemonicParsing="false" onAction="#showUsersManagmentPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItemActive" stylesheets="@../../css/admin.css" text="Users">
+            <Button fx:id="usersManagmentPageBtn" alignment="BASELINE_LEFT" layoutY="186.0" mnemonicParsing="false" onAction="#showUsersManagmentPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Users">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
@@ -32,7 +32,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="accountsPageBtn" alignment="BASELINE_LEFT" layoutY="235.0" mnemonicParsing="false" onAction="#showAccountsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Accounts">
+            <Button fx:id="accountsPageBtn" alignment="BASELINE_LEFT" layoutY="235.0" mnemonicParsing="false" onAction="#showAccountsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItemActive" stylesheets="@../../css/admin.css" text="Accounts">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -69,7 +69,7 @@
       </AnchorPane>
       <AnchorPane layoutX="228.0" layoutY="64.0" prefHeight="506.0" prefWidth="779.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
          <children>
-            <Button fx:id="createNewUserBtn" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#showUserCreationPage" prefHeight="42.0" prefWidth="148.0" styleClass="createBtn" stylesheets="@../../css/admin.css" text="+ Create New User">
+            <Button fx:id="createNewUserBtn" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#showUserCreationPage" prefHeight="42.0" prefWidth="177.0" styleClass="createBtn" stylesheets="@../../css/admin.css" text="+ Create New Account">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -77,7 +77,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="showAllUsersBtn" layoutX="14.0" layoutY="105.0" mnemonicParsing="false" onAction="#showAllUsers" prefHeight="42.0" prefWidth="118.0" styleClass="showAllBtn" stylesheets="@../../css/admin.css" text="Show All Users">
+            <Button fx:id="showAllUsersBtn" layoutX="14.0" layoutY="105.0" mnemonicParsing="false" onAction="#showAllUsers" prefHeight="42.0" prefWidth="162.0" styleClass="showAllBtn" stylesheets="@../../css/admin.css" text="Show All Accounts">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -89,10 +89,10 @@
               <columns>
                 <TableColumn fx:id="idCol" prefWidth="44.0" text="id" />
                 <TableColumn fx:id="usernameCol" prefWidth="104.0" text="username" />
-                  <TableColumn fx:id="passwordCol" prefWidth="104.0" text="password" />
-                  <TableColumn fx:id="emailCol" prefWidth="168.0" text="email" />
-                  <TableColumn fx:id="genderCol" prefWidth="79.0" text="gender" />
-                  <TableColumn fx:id="roleCol" prefWidth="79.0" text="role" />
+                  <TableColumn fx:id="passwordCol" prefWidth="104.0" text="currency" />
+                  <TableColumn fx:id="emailCol" prefWidth="168.0" text="Balance" />
+                  <TableColumn fx:id="genderCol" prefWidth="85.0" text="gender" />
+                  <TableColumn fx:id="roleCol" minWidth="0.0" prefWidth="73.0" text="role" />
               </columns>
             </TableView>
             <Button fx:id="updateSelectedUserBtn" layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#updateSelectedUser" prefHeight="42.0" prefWidth="118.0" styleClass="updateBtn" stylesheets="@../../css/admin.css" text="Update">
@@ -113,7 +113,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Label layoutX="233.0" layoutY="13.0" prefHeight="42.0" prefWidth="162.0" text="Users Managment" textFill="#838383">
+      <Label layoutX="233.0" layoutY="13.0" prefHeight="42.0" prefWidth="198.0" text="Accounts Managment" textFill="#838383">
          <effect>
             <Glow level="0.45" />
          </effect>

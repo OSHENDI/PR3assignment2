@@ -77,14 +77,14 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <TableView layoutX="14.0" layoutY="164.0" prefHeight="233.0" prefWidth="598.0">
+            <TableView fx:id="accountsTableView" layoutX="14.0" layoutY="164.0" prefHeight="233.0" prefWidth="598.0">
                <columns>
-                  <TableColumn prefWidth="44.0" text="Id" />
-                  <TableColumn prefWidth="130.0" text="Account number" />
-                  <TableColumn prefWidth="125.0" text="User Name" />
-                  <TableColumn prefWidth="74.0" text="Currency" />
-                  <TableColumn prefWidth="87.0" text="Balance" />
-                  <TableColumn prefWidth="138.0" text="Creation Date" />
+                  <TableColumn fx:id="AccIdCol" prefWidth="44.0" text="Id" />
+                  <TableColumn fx:id="AccNumberCol" prefWidth="130.0" text="Account number" />
+                  <TableColumn fx:id="UsernameCol" prefWidth="125.0" text="User Name" />
+                  <TableColumn fx:id="currencyCol" prefWidth="74.0" text="Currency" />
+                  <TableColumn fx:id="BalanceCol" prefWidth="87.0" text="Balance" />
+                  <TableColumn fx:id="creationDateCol" prefWidth="138.0" text="Creation Date" />
                </columns>
             </TableView>
             <Button fx:id="updateSelectedAccountBtn" layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#updateSelectedAccount" prefHeight="42.0" prefWidth="118.0" styleClass="updateBtn" stylesheets="@../../css/admin.css" text="Update">

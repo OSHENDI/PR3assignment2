@@ -81,7 +81,7 @@ public class UpdateUserPageController implements Initializable {
         String email = emailTF.getText();
         String gender = ((RadioButton)genderGroup.getSelectedToggle()).getText();
         String role = ((RadioButton)roleGroup.getSelectedToggle()).getText();
-        
+        //USING PERSISTENCEMANAGER (SINGLETON) TO MAKE THE CONTROLLER UPDATE THE SPECIFIED OBJECT
          UsersJpaController controller = new UsersJpaController(PersistenceManager.
                  getInstance().getEntityManagerFactory());
          
@@ -102,8 +102,8 @@ public class UpdateUserPageController implements Initializable {
         //close the update stage using our global stage var in UsersManagmentController and show an alert
         Controller.Admin.UsersManagmentController.updateStage.close();
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("User updated");
-        alert.setContentText("User updated");
+        alert.setTitle("Account updated");
+        alert.setContentText("Account updated");
         alert.showAndWait();
     }
 

@@ -21,7 +21,7 @@
                   <Font name="System Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="usersManagmentPageBtn" alignment="BASELINE_LEFT" layoutY="186.0" mnemonicParsing="false" onAction="#showUsersManagmentPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItemActive" stylesheets="@../../css/admin.css" text="Users">
+            <Button fx:id="usersManagmentPageBtn" alignment="BASELINE_LEFT" layoutY="186.0" mnemonicParsing="false" onAction="#showUsersManagmentPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Users">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -32,7 +32,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="accountsPageBtn" alignment="BASELINE_LEFT" layoutY="235.0" mnemonicParsing="false" onAction="#showAccountsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Accounts">
+            <Button fx:id="accountsPageBtn" alignment="BASELINE_LEFT" layoutY="235.0" mnemonicParsing="false" onAction="#showAccountsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItemActive" stylesheets="@../../css/admin.css" text="Accounts">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -84,28 +84,28 @@
             </Label>
             <TextField fx:id="usernameTF" layoutX="169.0" layoutY="64.0" styleClass="textField" stylesheets="@../../css/admin.css" />
             <TextField fx:id="passwordTF" layoutX="169.0" layoutY="106.0" styleClass="textField" stylesheets="@../../css/admin.css" />
-            <Label layoutX="42.0" layoutY="99.0" prefHeight="42.0" prefWidth="127.0" text="Password " textFill="#383560">
+            <Label layoutX="42.0" layoutY="99.0" prefHeight="42.0" prefWidth="127.0" text="Currency" textFill="#383560">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <TextField fx:id="emailTF" layoutX="169.0" layoutY="148.0" styleClass="textField" stylesheets="@../../css/admin.css" />
-            <Label layoutX="42.0" layoutY="141.0" prefHeight="42.0" prefWidth="127.0" text="Email " textFill="#383560">
+            <Label layoutX="42.0" layoutY="141.0" prefHeight="42.0" prefWidth="127.0" text="Balance" textFill="#383560">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="42.0" layoutY="205.0" prefHeight="42.0" prefWidth="127.0" text="Gender" textFill="#383560">
+            <Label layoutX="42.0" layoutY="205.0" opacity="0.0" prefHeight="42.0" prefWidth="127.0" text="Gender" textFill="#383560">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="42.0" layoutY="254.0" prefHeight="42.0" prefWidth="127.0" text="Role" textFill="#383560">
+            <Label layoutX="42.0" layoutY="254.0" opacity="0.0" prefHeight="42.0" prefWidth="127.0" text="Role" textFill="#383560">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <RadioButton layoutX="169.0" layoutY="214.0" mnemonicParsing="false" selected="true" text="Male" textFill="#383560">
+            <RadioButton layoutX="169.0" layoutY="214.0" mnemonicParsing="false" opacity="0.0" selected="true" text="Male" textFill="#383560">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -113,12 +113,12 @@
                   <ToggleGroup fx:id="genderGroup" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="263.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Female" textFill="#383560" toggleGroup="$genderGroup">
+            <RadioButton layoutX="263.0" layoutY="214.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="95.0" text="Female" textFill="#383560" toggleGroup="$genderGroup">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="263.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Admin" textFill="#383560">
+            <RadioButton layoutX="263.0" layoutY="263.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="95.0" text="Admin" textFill="#383560">
                <toggleGroup>
                   <ToggleGroup fx:id="roleGroup" />
                </toggleGroup>
@@ -126,14 +126,14 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="169.0" layoutY="263.0" mnemonicParsing="false" selected="true" text="User" textFill="#383560" toggleGroup="$roleGroup">
+            <RadioButton layoutX="169.0" layoutY="263.0" mnemonicParsing="false" opacity="0.0" selected="true" text="User" textFill="#383560" toggleGroup="$roleGroup">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </RadioButton>
          </children>
       </AnchorPane>
-      <Label layoutX="233.0" layoutY="13.0" prefHeight="42.0" prefWidth="286.0" text="Users Managment / Create User" textFill="#838383">
+      <Label layoutX="233.0" layoutY="13.0" prefHeight="42.0" prefWidth="348.0" text="Accounts Managment / Create Account" textFill="#838383">
          <effect>
             <Glow level="0.45" />
          </effect>

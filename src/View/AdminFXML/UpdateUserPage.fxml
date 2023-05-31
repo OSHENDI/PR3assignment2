@@ -12,7 +12,7 @@
    <children>
       <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="488.0" prefWidth="444.0" style="-fx-background-color: white; -fx-background-radius: 40px;">
          <children>
-            <Label layoutX="132.0" layoutY="14.0" prefHeight="46.0" prefWidth="210.0" text="Update User" textFill="#3f4c6f">
+            <Label layoutX="132.0" layoutY="14.0" prefHeight="46.0" prefWidth="210.0" text="Update Account" textFill="#3f4c6f">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -25,12 +25,12 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="166.0" prefHeight="46.0" prefWidth="143.0" text="Password :">
+            <Label layoutX="72.0" layoutY="166.0" prefHeight="46.0" prefWidth="143.0" text="Currency:">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="212.0" prefHeight="46.0" prefWidth="143.0" text="Email :">
+            <Label layoutX="72.0" layoutY="212.0" prefHeight="46.0" prefWidth="143.0" text="Balance:">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
